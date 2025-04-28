@@ -29,7 +29,7 @@ login_manager.login_view = 'login'
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(25), unique=True, nullable=False)
-    password = db.Column(db.String(80), nullable=False)
+    password = db.Column(db.String(256), nullable=False)
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -38,13 +38,13 @@ def load_user(user_id):
 # 登入表單
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=4, max=25)])
-    password = PasswordField('Password', validators=[DataRequired(), Length(min=8, max=80)])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=8, max=256)])
     submit = SubmitField('Login')
 
 # 註冊表單
 class RegisterForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=4, max=25)])
-    password = PasswordField('Password', validators=[DataRequired(), Length(min=8, max=80)])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=8, max=256)])
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Register')
 
@@ -165,6 +165,16 @@ def tech():
 @app.route('/news')
 def news():
     return render_template('news.html')
+
+@app.route('/courseDATA')
+@login_required
+def courseDATA():
+    return render_template('courseDATA.html')
+
+@app.route('/userDATA')
+@login_required
+def userDATA():
+    return render_template('userDATA.html')
 
 @app.route('/account')
 def account():
