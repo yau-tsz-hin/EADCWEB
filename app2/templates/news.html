@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新聞與認證 - IT 課程平台</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  {% include 'navbar.html' %}
+
+  <main class="container">
+    <section class="section">
+      <h2>IT界新聞</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>How AI is changing gaming tech in 2025</h3>
+          <a class="btn" href="https://www.youtube.com/watch?v=lWY2q90lbWg" target="_blank">觀看影片</a>
+        </div>
+        <div class="card">
+          <h3>How Cloud Computing Became a Big Tech Battleground</h3>
+          <a class="btn" href="https://www.youtube.com/watch?v=p7MqvJAKLoM" target="_blank">觀看影片</a>
+        </div>
+        <div class="card">
+          <h3>Hackers expose deep cybersecurity vulnerabilities in AI</h3>
+          <a class="btn" href="https://www.youtube.com/watch?v=Fg9hCKH1sYs" target="_blank">觀看影片</a>
+        </div>
+        <div class="card">
+          <h3>Is This the end of Software Engineers?</h3>
+          <a class="btn" href="https://www.youtube.com/watch?v=6sVEa7xPDzA" target="_blank">觀看影片</a>
+        </div>
+        <div class="card">
+          <h3>Big Tech: A look at regulatory challenges</h3>
+          <a class="btn" href="https://www.youtube.com/watch?v=A6Y4tBAttOs" target="_blank">觀看影片</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>牌照與認證資源</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AWS 認證官方網站</h3>
+          <a class="btn" href="https://aws.amazon.com/tw/certification/" target="_blank">前往</a>
+        </div>
+        <div class="card">
+          <h3>Google Cloud 證書官方網站</h3>
+          <a class="btn" href="https://grow.google/intl/zh-HK_hk/certificates/" target="_blank">前往</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 AWS 課程示範網站</p>
+    </div>
+  </footer>
+</body>
+</html>

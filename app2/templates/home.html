@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWS 課程平台</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  {% include 'navbar.html' %}
+
+  <header class="hero" style="background: linear-gradient(90deg, #232F3E 0%, #0073e6 100%); color: white; padding: 100px 0; text-align: center;">
+    <div class="container">
+      <h1 style="font-size: 3.5rem; font-weight: bold; margin-bottom: 20px;">立即開始 AWS 雲端教學課程</h1>
+      <p style="font-size: 1.5rem; margin-bottom: 30px;">AWS 協助您建置高彈性、高可靠性的應用程式與基礎架構。</p>
+      <a class="btn" href="https://aws.amazon.com/tw/" target="_blank" style="background-color: #FF9900; color: #232F3E; font-weight: bold; padding: 15px 30px; font-size: 1.2rem; border-radius: 5px; text-decoration: none;">開始使用 AWS</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" style="margin-top: 50px;">
+      <h2>AWS 主要服務</h2>
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div class="card" style="text-align: center;">
+          <h3>計算服務</h3>
+          <p style="margin-bottom: 20px;">使用 Amazon EC2、Lambda 等服務，彈性擴展您的應用程式。</p>
+          <a class="btn" href="https://aws.amazon.com/tw/ec2/" target="_blank" style="margin-top: 20px;">了解更多</a>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>儲存服務</h3>
+          <p style="margin-bottom: 20px;">Amazon S3 提供安全且可擴展的物件儲存解決方案。</p>
+<a class="btn" href="https://aws.amazon.com/tw/s3/" target="_blank" style="margin-top: 20px;">了解更多</a>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>資料庫服務</h3>
+          <p style="margin-bottom: 20px;">Amazon RDS、DynamoDB 等多種資料庫服務，滿足不同需求。</p>
+<a class="btn" href="https://aws.amazon.com/tw/rds/" target="_blank" style="margin-top: 20px;">了解更多</a>
+      </div>
+    </section>
+
+    <section class="section" style="margin-top: 50px;">
+      <h2>與課程主任交流</h2>
+      <a class="btn secondary" href="mailto:220131096@stu.vtc.edu.hk">聯絡我們</a>
+    </section>
+
+    <section class="section" style="margin-top: 50px;">
+      <h2>認證與證照</h2>
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="card" style="text-align: center;">
+          <h3>AWS 證照</h3>
+          <a class="btn" href="https://aws.amazon.com/tw/certification/" target="_blank">了解更多</a>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>Google 證照</h3>
+          <a class="btn" href="https://grow.google/intl/zh-HK_hk/certificates/" target="_blank">了解更多</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background-color: #232F3E; color: white; padding: 20px 0; text-align: center; margin-top: 50px;">
+    <div class="container">
+      <p>© 2025 AWS 課程示範網站</p>
+    </div>
+  </footer>
+</body>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Page Not Found</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      .error-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+      .error-title {
+        font-size: 10rem;
+        font-weight: bold;
+      }
+      .error-message {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="error-page">
+        <div class="error-title">404</div>
+        <div class="error-message">Oops! Page Not Found</div>
+        <p>Sorry, the page you are looking for does not exist. It might have been moved or deleted.</p>
+        <a href="{{ url_for('home') }}" class="btn btn-primary">Go to Homepage</a>
+      </div>
+    </div>
+  </body>
+</html>

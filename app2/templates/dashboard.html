@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制台 - IT 課程平台</title>
+    <style>
+        /* 基本的頁面樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* 左側導航欄 */
+        .sidebar {
+            width: 250px;
+            background-color: #232F3E;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+        }
+
+        .sidebar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #FF9900;
+            padding-left: 10px;
+        }
+
+        /* 內容區域 */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* 按鈕樣式 */
+        .btn {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #005bb5;
+        }
+
+        /* 小屏幕調整 */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .content {
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 左側導航欄 -->
+    <div class="sidebar">
+        <div class="logo">控制台</div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">首頁</a></li>
+            <li><a href="{{ url_for('account') }}">帳戶資料</a></li>
+            <li><a href="{{ url_for('account') }}">課程</a></li>
+            <li><a href="{{ url_for('account') }}">行事曆</a></li>
+            <li><a href="{{ url_for('account') }}">支援</a></li>
+            <li><a href="{{ url_for('logout') }}">登出</a></li>
+        </ul>
+    </div>
+
+    <!-- 內容區域 -->
+    <div class="content">
+        <h1>歡迎, {{ current_user.username }}來到控制台!</h1>
+        <p>在這裡您可以管理您的帳戶、課程、行事曆以及支援請求。</p>
+        <a href="{{ url_for('account') }}" class="btn">管理帳戶</a>
+    </div>
+</body>
+</html>
